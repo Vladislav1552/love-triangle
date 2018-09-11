@@ -6,15 +6,15 @@
 
 module.exports = function getLoveTrianglesCount(preferences = []) {
   
-  var len =preferences.length;
+ 
   var count = 0;
-      for (var i = 0; i < len; i++) {  
+    for (var i = 0; i < preferences.length; i++) {  
           var a = preferences[i] - 1;
           var b = preferences[a] - 1;
           var c = preferences[b] - 1;
           if ((c == i) && (a != b)) {
               count++;
-              preferences[a] = len+1;  
+              preferences[a] = preferences.length+1;  
           }
   
       }
